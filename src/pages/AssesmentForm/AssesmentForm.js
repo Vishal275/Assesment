@@ -67,6 +67,11 @@ function AssesmentForm() {
   //   }
   // }, [time])
 
+  window.onbeforeunload = function()
+  {
+      localStorage.clear();
+  };
+
   return (
     <>
       {scoreCard === false ? (
