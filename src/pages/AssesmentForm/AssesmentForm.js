@@ -31,9 +31,9 @@ function AssesmentForm() {
   const timeInMinutes = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = time - minutes * 60;
-    return `${minutes === 0 ? "" : minutes} ${minutes === 0 ? "" : "min :"} ${
-      seconds === 0 ? "00 sec" : seconds
-    } ${seconds === 0 ? "" : "sec"}`;
+    return `${minutes === 0 ? "" : minutes<10 ? `0${minutes}` : minutes} ${minutes === 0 ? "" : ":"} ${
+      seconds === 0 ? "00" : seconds<10 ? `0${seconds}` : seconds
+    } ${seconds === 0 ? "" : ""}`;
   };
   useEffect(() => {
     const interval = setInterval(() => {
