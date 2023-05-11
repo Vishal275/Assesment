@@ -50,10 +50,16 @@
   }
   .question-card .next-btn {
     font-size: 14px;
-    padding: 10px !important;
+    padding: 0px 10px 10px 10px !important;
   }
   .question-card .question h3 {
     padding-bottom: 0;
     font-size: 16px;
+    padding: 2px 4px !important;
+  }
 }
+@media only screen and (max-width: 350px) {
+  .questions-container .heading {
+    margin: 5px 5px 0px 5px;
+  }
 }

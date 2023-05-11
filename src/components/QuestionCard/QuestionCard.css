@@ -79,10 +79,27 @@
     padding: 0;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 650px) {
   .question-card .next-btn button {
     font-size: 14px;
     padding: 5px 30px;
   }
-  
+  .question-card .question {
+    padding: 2px 4px;
+  }
+.question-card .options-container .options {
+  padding: 4px;
+  margin-bottom: 5px !important;
+}
+
+}
+
+@media only screen and (max-width: 350px) {
+  .question-card .question {
+    padding: 2px 4px;
+  }
+.question-card .options-container .options {
+  padding: 4px;
+  margin-bottom: 5px !important;
+}
 }
