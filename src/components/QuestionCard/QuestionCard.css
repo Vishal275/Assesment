@@ -1,0 +1,88 @@
+.question-card-form {
+  padding: 10px;
+}
+.question-card .question {
+  padding: 10px 20px;
+}
+.question-card .question h3 {
+  padding-bottom: 0;
+}
+.question-card .options-container {
+  padding: 0 20px;
+}
+.question-card .options-container .options {
+  background: #faf5f1;
+  padding: 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.question-card .options-container .options:hover {
+  background-color: #e9bd6c;
+  color: #ffffff !important;
+}
+.question-card .options-container .options input {
+  width: 15px;
+  height: 15px;
+}
+.question-card .options-container .options label {
+  cursor: pointer;
+}
+.question-card .options-container .options span {
+  padding-left: 10px;
+}
+.question-card .options-container .options:not(:last-child) {
+  margin-bottom: 20px;
+}
+.question-card .comment-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.question-card .comment-section span {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.question-card .comment-section input {
+  border: none;
+  background-color: #faf5f1;
+  border-radius: 5px;
+  padding: 10px 20px;
+  outline: 0;
+  cursor: pointer;
+}
+.question-card .next-btn {
+  padding: 10px 20px;
+  text-align: end;
+}
+.question-card .next-btn div {
+  display: flex;
+  justify-content: space-between;
+}
+.question-card .next-btn button {
+  background-color: #fee0c9;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 50px;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.question-card .next-btn button:hover {
+  background-color: #f6ad28;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .question-card-form {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .question-card .next-btn button {
+    font-size: 14px;
+    padding: 5px 30px;
+  }
+  
+}

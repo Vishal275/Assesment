@@ -1,0 +1,238 @@
+{
+    "questionnaire_id": "C#_skills_questionnaire",
+    "title": "Assessment of C# Skills",
+    "time_required": "15 minutes",
+    "comments": "This questionnaire is designed to assess your level of proficiency in C#.",
+    "questions": [
+        {
+            "id": 1,
+            "question": "What is the difference between an abstract class and an interface in C#?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "An abstract class can have implementation for some of its members while an interface can't have any implementation."
+                },
+                {
+                    "id": 2,
+                    "answer": "An interface can have fields while an abstract class can't have fields."
+                },
+                {
+                    "id": 3,
+                    "answer": "An abstract class can have multiple inheritance while an interface can't have multiple inheritance."
+                },
+                {
+                    "id": 4,
+                    "answer": "An interface can have implementation for some of its members while an abstract class can't have any implementation."
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 2,
+            "question": "What is the difference between a struct and a class in C#?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "A struct is a value type while a class is a reference type."
+                },
+                {
+                    "id": 2,
+                    "answer": "A struct can have constructors while a class can't have constructors."
+                },
+                {
+                    "id": 3,
+                    "answer": "A struct can have methods while a class can't have methods."
+                },
+                {
+                    "id": 4,
+                    "answer": "A struct can have inheritance while a class can't have inheritance."
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 3,
+            "question": "Which of the following is the correct ways to set a value 3.14 in a variable pi such that it cannot be modified?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "float pi = 3.14F;"
+                },
+                {
+                    "id": 2,
+                    "answer": "float pi = 3.14F;"
+                },
+                {
+                    "id": 3,
+                    "answer": "const float pi = 3.14F;"
+                },
+                {
+                    "id": 4,
+                    "answer": "const float pi; pi = 3.14F;"
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 4,
+            "question": "Which property can be used to find the length of a string?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "Length"
+                },
+                {
+                    "id": 2,
+                    "answer": "getLength()"
+                },
+                {
+                    "id": 3,
+                    "answer": "length()"
+                },
+                {
+                    "id": 4,
+                    "answer": "length"
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 5,
+            "question": "Which keyword is used to create a class in C#?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "class()"
+                },
+                {
+                    "id": 2,
+                    "answer": "MyClass"
+                },
+                {
+                    "id": 3,
+                    "answer": "className"
+                },
+                {
+                    "id": 4,
+                    "answer": "class"
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 6,
+            "question": "What is the correct way to create an object called myObj of MyClass?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "class myObj = new MyClass();"
+                },
+                {
+                    "id": 2,
+                    "answer": "MyClass myObj = new MyClass();"
+                },
+                {
+                    "id": 3,
+                    "answer": "new myObj = MyClass();"
+                },
+                {
+                    "id": 4,
+                    "answer": "class MyClass = new myObj();"
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 7,
+            "question": "Which of the following statements is correct about properties used in C#.NET?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "A property can simultaneously be read only or write only."
+                },
+                {
+                    "id": 2,
+                    "answer": "A property can be either read only or write only."
+                },
+                {
+                    "id": 3,
+                    "answer": "A write only property will have only get accessor."
+                },
+                {
+                    "id": 4,
+                    "answer": "A write only property will always return a value."
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 8,
+            "question": "A Student class has a property called rollNo and stu is a reference to a Student object and we want the statement stu.RollNo = 28 to fail. Which of the following options will ensure this functionality?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "Declare rollNo property with both get and set accessors."
+                },
+                {
+                    "id": 2,
+                    "answer": "Declare rollNo property with only set accessor."
+                },
+                {
+                    "id": 3,
+                    "answer": "Declare rollNo property with get, set and normal accessors."
+                },
+                {
+                    "id": 4,
+                    "answer": "Declare rollNo property with only get accessor."
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 9,
+            "question": "In C#.NET if we do not catch the exception thrown at runtime then which of the following will catch it?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "Compiler"
+                },
+                {
+                    "id": 2,
+                    "answer": "CLR"
+                },
+                {
+                    "id": 3,
+                    "answer": "Linker"
+                },
+                {
+                    "id": 4,
+                    "answer": "Loader"
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        },
+        {
+            "id": 10,
+            "question": "When would a structure variable get destroyed?",
+            "answers": [
+                {
+                    "id": 1,
+                    "answer": "When no reference refers to it, it will get garbage collected."
+                },
+                {
+                    "id": 2,
+                    "answer": "Depends upon whether it is created using new or without using new."
+                },
+                {
+                    "id": 3,
+                    "answer": "When it goes out of scope."
+                },
+                {
+                    "id": 4,
+                    "answer": "Depends upon the Project Settings made in Visual Studio.NET."
+                }
+            ],
+            "comments_section": "Please provide any comments or additional information regarding your answer to this question:"
+        }
+    ]
+}

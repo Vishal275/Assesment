@@ -1,0 +1,64 @@
+.scorecard {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+}
+.score {
+  padding: 20px;
+}
+.scorecard h2 {
+  text-align: center;
+}
+.scorecard h2:first-child {
+  margin-bottom: 20px;
+}
+.scorecard .scorecard-list {
+  list-style-type: none;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.scorecard .scorecard-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fee0c9;
+  border-radius: 5px;
+}
+.scorecard .scorecard-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .scorecard .scorecard-list {
+        width: 80%;
+        font-size: 16px;
+    }
+    .scorecard h2 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .score {
+        padding: 15px 10px;
+    }
+    .scorecard .scorecard-list {
+        width: 98%;
+        font-size: 12px;
+    }
+    .scorecard h2 {
+        font-size: 16px;
+    }
+    .scorecard h2:first-child {
+        margin-bottom: 10px;
+    }
+    .scorecard .scorecard-list {
+        padding-bottom: 10px;
+    }
+}

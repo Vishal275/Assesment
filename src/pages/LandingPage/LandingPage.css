@@ -1,0 +1,60 @@
+.landing-page {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+}
+.landing {
+  padding: 20px;
+}
+.landing > h2,
+h3,
+p {
+  padding-bottom: 20px;
+}
+.landing p {
+  font-size: 16px;
+}
+.start-btn {
+  background-color: #fee0c9;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 50px;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.start-btn:hover {
+  background-color: #f6ad28;
+  color: white;
+}
+.top-colored {
+  background-color: #f6ad28;
+  height: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.btn-container {
+  text-align: center;
+}
+
+.landing-form {
+  display: flex;
+  flex-direction: column;
+}
+.landing-form input{
+  border: none;
+  outline: none;
+  background-color: #faf5f1;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.landing-form .error-msg {
+  color: red;
+  padding: 0px 20px;
+}
