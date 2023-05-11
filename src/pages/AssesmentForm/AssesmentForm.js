@@ -8,7 +8,7 @@ import ScoreCard from "../ScoreCard/ScoreCard";
 function AssesmentForm() {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [scoreCard, setScoreCard] = useState(false);
-  const [time, setTime] = useState(10);
+  const [time, setTime] = useState(900);
   const [score, setScore] = useState(0);
   const [userData, setUserData] = useState({
     name: "",
