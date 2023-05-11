@@ -27,9 +27,7 @@ function QuestionCard({
       JSON.stringify(checkedValues)
     ) {
       setScore(score + 1);
-    } else {
-      console.log("no");
-    }
+    } 
     inc();
   };
 

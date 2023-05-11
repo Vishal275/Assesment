@@ -18,7 +18,6 @@ function AssesmentForm() {
 
   const { questions } = QuestionData;
   const { correctAnswer } = CorrectAnswers;
-  console.log(questionNumber);
   const inc = () => {
     if (questionNumber === 10) {
       setScoreCard(true);

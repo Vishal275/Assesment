@@ -5,7 +5,6 @@ function ScoreCard({userData}) {
   useEffect(() => {
     localStorage.clear();
   })
-  console.log(userData.score);
   return (
     <div className="scorecard">
       <div className="top-colored"></div>

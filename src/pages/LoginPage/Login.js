@@ -31,20 +31,6 @@ function Login() {
     }
   };
 
-  // const saveData = (data) => {
-  //   const jsonData = JSON.stringify(data);
-  //   const blob = new Blob([jsonData], { type: "text/json" });
-  //   document.createElement("a")
-  //   // const finished = (error) => {
-  //   //   if (error) {
-  //   //     console.log(error);
-  //   //     return;
-  //   //   }
-  //   // } 
-  //   // scores.push(jsonData);
-  //   // fs.writeFile('Scores.json', jsonData, finished);
-  // }
-
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (handleOnValidation()) {
