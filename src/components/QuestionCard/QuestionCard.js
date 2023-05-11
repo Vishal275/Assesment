@@ -72,6 +72,7 @@ function QuestionCard({
               <input
                 type="checkbox"
                 name={elem.id}
+                id={elem.id}
                 value={elem.id}
                 onChange={handleChange}
               />

@@ -63,7 +63,10 @@
     margin: 5px 5px 0px 5px;
   }
   .questions-container .time {
-    padding: 1px 2px;
+    padding: 6px 4px;
     font-size: 12px;
+    width: 43px;
+    align-self: center;
+    text-align: center;
   }
 }
