@@ -27,7 +27,7 @@ function AllUserData() {
           <span>Score</span>
         </div>
       <div className="scroll">
-        {allUserData.map((elem, i) => {
+        {allUserData?.map((elem, i) => {
           return (
             <div className="single-user" key={elem._id}>
               {i+1}.<span> {elem.userName}</span>
