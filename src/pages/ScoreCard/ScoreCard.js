@@ -1,10 +1,28 @@
 import React, { useEffect } from "react";
 import "./ScoreCard.css";
+import axios from "axios";
+import server from "../../config/server.json";
 
-function ScoreCard({score}) {
+function ScoreCard({score, user_id}) {
+  console.log(user_id);
   useEffect(() => {
-    localStorage.clear();
-  })
+    const postData = async () => {
+      try {
+        const body = {
+          user_id: user_id,
+          score: score
+        };
+        const response = await axios.post(`${server.url.production}${server.api.EDIT_SCORE}`, body);
+        if (response.data.message === "Success") {
+          localStorage.clear();
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    postData();
+  }, []) //eslint-disable-line
+
   return (
     <div className="scorecard">
       <div className="top-colored"></div>

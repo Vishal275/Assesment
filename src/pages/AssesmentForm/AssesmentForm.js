@@ -157,7 +157,7 @@ function AssesmentForm() {
           </div>
         </div>
       ) : (
-        <ScoreCard score={score} />
+        <ScoreCard score={score} user_id={user._id} />
       )}
     </>
   );
