@@ -56,7 +56,7 @@
 }
 .question-card .next-btn div {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .question-card .next-btn button {
   background-color: #fee0c9;

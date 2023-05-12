@@ -34,7 +34,7 @@ function QuestionCard({
     ) {
       setScore(score + 1);
     } 
-    
+
     setSelectedOpt([...selectOpt, {question_id: questionId, answer: checkedValues , comment:comment}])
     // try {
     //   const body = {
@@ -113,13 +113,13 @@ function QuestionCard({
         {questionId === 1 ? <button type={"submit"}>Next</button> : null}
         {questionId > 1 && questionId < 10 ? (
           <div>
-            <button onClick={() => dec()}>Previous</button>
+            {/* <button onClick={() => dec()}>Previous</button> */}
             <button type={"submit"}>Next</button>
           </div>
         ) : null}
         {questionId === 10 ? (
           <div>
-            <button onClick={() => dec()}>Previous</button>
+            {/* <button onClick={() => dec()}>Previous</button> */}
             <button type={"submit"}>End Test</button>
           </div>
         ) : null}
