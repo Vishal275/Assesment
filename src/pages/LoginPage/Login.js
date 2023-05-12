@@ -48,11 +48,12 @@ function Login() {
           email: userData.email,
         };
         const response = await axios.post(
-          `${server.url.local}${server.api.CREATE_USER}`,
+          `${server.url.production}${server.api.CREATE_USER}`,
           body
         );
         if (response) {
-          localStorage.setItem("user", JSON.stringify(response.data.user));
+          const user = response.data.user;
+          localStorage.setItem("user", JSON.stringify(user));
           navigate("/assesment");
         }
       } catch (error) {
