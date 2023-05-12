@@ -4,8 +4,9 @@ import AssesmentForm from "./pages/AssesmentForm/AssesmentForm";
 import ScoreCard from "./pages/ScoreCard/ScoreCard";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import PrivateRoutes from "./components/PrivateRoutes/PrivateRoutes";
+import AllUserData from "./pages/AllUserData/AllUserData";
 
-function App() { 
+function App() {
   return (
     <div className="App">
       <div className="wrapper">
@@ -14,6 +15,7 @@ function App() {
             <Routes>
               {/* OPEN ROUTES */}
               <Route path="/" element={<LandingPage />} exact />
+              <Route path="/allusers-data" element={<AllUserData />} exact />
               {/* PROTECTED ROUTES */}
               <Route element={<PrivateRoutes />}>
                 <Route path="/assesment" element={<AssesmentForm />} exact />
