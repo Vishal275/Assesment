@@ -15,12 +15,18 @@ function QuestionCard({
   correctAnswer,
   score,
   setScore,
+  selectOpt,
+  setSelectedOpt
 }) {
   const navigate = useNavigate();
   const [checkedValues, setCheckedValues] = useState([]);
-  
+  const [comment, setComment] = useState("");  
 
-  const handleOnSubmit = (e) => {
+  const handleComment = (e) => {
+    setComment(e.target.value);
+  }
+
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
     if (
       JSON.stringify(correctAnswer[questionId - 1].correct_answer) ===
@@ -28,8 +34,28 @@ function QuestionCard({
     ) {
       setScore(score + 1);
     } 
+    
+    setSelectedOpt([...selectOpt, {question_id: questionId, answer: checkedValues , comment:comment}])
+    // try {
+    //   const body = {
+    //     user_id: user._id,
+    //     score: questionId === 10 ? score : "",
+
+    //   }
+    //   const response = await axios.post('http://localhost:5000/api/test-details/edit', 
+    //   body)
+    // } catch (error) {
+      
+    // }
     inc();
   };
+
+  // useEffect(() => {
+  //   const user = JSON.parse(localStorage.getItem('user'))
+  //   if (user) {
+  //     setUser(user);
+  //   }
+  // }, []);
 
   useEffect(() => {
     setUserData({ ...userData, score: score });
@@ -44,19 +70,12 @@ function QuestionCard({
     }
   };
 
-  // useEffect(() => {
-  //   const answers = JSON.parse(localStorage.getItem('answers'));
-  //   if (answers) {
-  //    setAnswerChecked(answers);
-  //   }
-  // }, []);
-
   useEffect(() => {
-    const name = localStorage.getItem('name');
+    const name = localStorage.getItem('user');
     if (!name) {
       navigate('/')
     }
-  }, [navigate])
+  }, [navigate]);
 
   return (
     <form onSubmit={handleOnSubmit} className="question-card-form">
@@ -88,7 +107,7 @@ function QuestionCard({
           Please provide any comments or additional information regarding your
           answer to this question:
         </span>
-        <input type="text" placeholder="Write your comments here" />
+        <input type="text" placeholder="Write your comments here" onChange={handleComment} />
       </div>
       <div className="next-btn">
         {questionId === 1 ? <button type={"submit"}>Next</button> : null}

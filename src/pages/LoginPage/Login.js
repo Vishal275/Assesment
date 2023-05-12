@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Login.css";
 import QuestionData from "../JsonData/QuestionsFile.json";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import server from "../../config/server.json";
 
 function Login() {
   const navigate = useNavigate();
@@ -22,24 +24,40 @@ function Login() {
   const handleOnValidation = () => {
     if (userData.name === "" || userData.name > 30) {
       setError(true);
-      setErrorMessage("Please enter a valid Name")
+      setErrorMessage("Please enter a valid Name");
     } else if (userData.email === "" || userData.email > 30) {
       setError(true);
-      setErrorMessage("Please enter a valid Email")
+      setErrorMessage("Please enter a valid Email");
     } else {
-      return true
+      return true;
     }
   };
 
-  const handleOnSubmit = (e) => {
+  window.onbeforeunload = function()
+  {
+      localStorage.clear();
+  };
+
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
     if (handleOnValidation()) {
-      setError(false)
-      // saveData(userData)
-      localStorage.setItem("name", userData.name);
-      localStorage.setItem("email", userData.email);
-      navigate('/assesment');
-    // setSteps(2)
+      setError(false);
+      try {
+        const body = {
+          userName: userData.name,
+          email: userData.email,
+        };
+        const response = await axios.post(
+          `${server.url.local}${server.api.CREATE_USER}`,
+          body
+        );
+        if (response) {
+          localStorage.setItem("user", JSON.stringify(response.data.user));
+          navigate("/assesment");
+        }
+      } catch (error) {
+        console.log("You have already submitted the assesment");
+      }
     }
   };
 
@@ -57,17 +75,15 @@ function Login() {
             name="name"
             value={name}
             onChange={handleChange}
-            
-            />
+          />
           <input
             type="email"
             placeholder="Enter your email id here"
             name="email"
             value={email}
             onChange={handleChange}
-            
-            />
-            {error && <span className="error-msg">{errorMessage}</span>}
+          />
+          {error && <span className="error-msg">{errorMessage}</span>}
           <div className="btn-container">
             <button type={"submit"} className="start-btn">
               Start Test

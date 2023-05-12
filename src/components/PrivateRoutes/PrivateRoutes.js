@@ -4,7 +4,7 @@ const PrivateRoutes = () => {
   const location = useLocation();
 
   const isTokenValid = () => {
-    const token = localStorage.getItem("name");
+    const token = localStorage.getItem("user");
     if (token) return true;
     else return false;
   };

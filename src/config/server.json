@@ -1,0 +1,11 @@
+{
+    "url": {
+        "production": "https://real-red-mackerel-hem.cyclic.app/",
+        "local": "http://localhost:5000/"
+    },
+    "api": {
+        "CREATE_USER": "api/users/create",
+        "FETCH_USER" : "api/users/fetch-user",
+        "EDIT_TEST_DETAILS": "api/test-details/edit"
+    }
+}
