@@ -42,7 +42,8 @@
   
   .landing-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
   }
   .landing-form input{
     border: none;
@@ -52,10 +53,18 @@
     margin-bottom: 20px;
     border-radius: 5px;
     font-size: 16px;
+    flex-basis: 33%;
   }
   
   .landing-form .error-msg {
     color: red;
     padding: 0px 20px;
+  }
+
+  @media only screen and (max-width:850px) {
+    .landing-form {
+      flex-direction: column;
+      gap: 0px;
+    }
   }
   
