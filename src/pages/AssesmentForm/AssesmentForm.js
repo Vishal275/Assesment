@@ -6,12 +6,14 @@ import CorrectAnswers from "../JsonData/Answers.json";
 import ScoreCard from "../ScoreCard/ScoreCard";
 import axios from "axios";
 import server from "../../config/server.json";
+import loader from "../../assets/loader.gif";
 
 function AssesmentForm() {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [scoreCard, setScoreCard] = useState(false);
-  const [time, setTime] = useState(900);
+  const [time, setTime] = useState(902);
   const [score, setScore] = useState(0);
+  const [isloading, setIsloding] = useState(true);
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -73,6 +75,10 @@ function AssesmentForm() {
     }
   }, []);
 
+  setTimeout(() => {
+    setIsloding(false);
+  }, 2000);
+
   useEffect(() => {
     const sendDetails = async () => {
       try {
@@ -119,6 +125,8 @@ function AssesmentForm() {
 
   return (
     <>
+      {isloading === false ? 
+      <>
       {scoreCard === false ? (
         <div className="questions-container">
           <div className="top-colored"></div>
@@ -133,7 +141,7 @@ function AssesmentForm() {
                 <div key={elem.id}>
                   {questionNumber === elem.id ? (
                     <QuestionCard
-                      questionId={elem.id}
+                    questionId={elem.id}
                       question={elem.question}
                       answers={elem.answers}
                       questionNumber={questionNumber}
@@ -147,10 +155,10 @@ function AssesmentForm() {
                       setScore={setScore}
                       selectOpt={selectOpt}
                       setSelectedOpt={setSelectedOpt}
-                    />
-                  ) : (
-                    ""
-                  )}
+                      />
+                      ) : (
+                        ""
+                        )}
                 </div>
               );
             })}
@@ -158,7 +166,9 @@ function AssesmentForm() {
         </div>
       ) : (
         <ScoreCard score={score} user_id={user._id} />
-      )}
+        )}
+        </>
+      : <img src={loader} alt="Loading" width={"500px"} />}
     </>
   );
 }
