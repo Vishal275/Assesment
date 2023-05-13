@@ -57,13 +57,16 @@ function Login() {
           navigate("/assesment");
         }
       } catch (error) {
-        console.log("You have already submitted the assesment");
+        setError(true);
+        setErrorMessage("You have already submitted the assesment");
+        console.log("You have already submitted the assesment", error);
       }
     }
   };
-
+  
   return (
     <div className="landing-page">
+      {error && <span className="error-msg">{errorMessage}</span>}
       <div className="top-colored"></div>
       <div className="landing">
         <h2 className="title">{title}</h2>
@@ -84,7 +87,6 @@ function Login() {
             value={email}
             onChange={handleChange}
           />
-          {error && <span className="error-msg">{errorMessage}</span>}
           <div className="btn-container">
             <button type={"submit"} className="start-btn">
               Start Test

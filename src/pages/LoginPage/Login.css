@@ -3,6 +3,7 @@
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 100%;
+    position: relative;
   }
   .landing {
     padding: 20px;
@@ -56,9 +57,13 @@
     flex-basis: 33%;
   }
   
-  .landing-form .error-msg {
+  .error-msg {
     color: red;
     padding: 0px 20px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 10px;
   }
 
   @media only screen and (max-width:850px) {
